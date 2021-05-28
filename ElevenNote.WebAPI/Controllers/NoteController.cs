@@ -64,5 +64,21 @@ namespace ElevenNote.WebAPI.Controllers
 
             return Ok();
         }
+        public IHttpActionResult AddStar(bool isStarred)
+        {
+            var service = CreateNoteService();
+
+            if (!service.AddStar(isStarred))
+                return InternalServerError();
+            return Ok();
+        }
+        public IHttpActionResult RemoveStar(bool isStarred)
+        {
+            var service = CreateNoteService();
+
+            if (!service.DeleteStar(isStarred))
+                return InternalServerError();
+            return Ok();
+        }
     }
 }

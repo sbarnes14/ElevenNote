@@ -100,5 +100,29 @@ namespace ElevenNote.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        public bool AddStar(bool isStarred)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Notes
+                        .Single(e => e.IsStarred == isStarred);
+                ctx.Notes.Add(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
+        public bool DeleteStar(bool isStarred)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Notes
+                        .Single(e => e.IsStarred == isStarred);
+                ctx.Notes.Remove(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

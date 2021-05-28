@@ -86,6 +86,15 @@
   <ItemGroup>
     <Compile Include="Category.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202105271426554_InitialCreate.cs" />
+    <Compile Include="Migrations\202105271426554_InitialCreate.Designer.cs">
+      <DependentUpon>202105271426554_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105281405478_InitialMigration.cs" />
+    <Compile Include="Migrations\202105281405478_InitialMigration.Designer.cs">
+      <DependentUpon>202105281405478_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -98,6 +107,14 @@
       <Project>{d7344613-258e-41c7-837a-a76f179ea885}</Project>
       <Name>ElevenNote.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105271426554_InitialCreate.resx">
+      <DependentUpon>202105271426554_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105281405478_InitialMigration.resx">
+      <DependentUpon>202105281405478_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

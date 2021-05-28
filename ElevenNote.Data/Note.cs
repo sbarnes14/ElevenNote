@@ -20,6 +20,7 @@ namespace ElevenNote.Data
         public string Content { get; set; }
         [Required]
         public DateTimeOffset CreateUtc { get; set; }
-        public DateTimeOffset? ModifiedUtc { get; set; }
+        public DateTimeOffset? ModifiedUtc { get; set; }        
+        public bool IsStarred { get; set; }
     }
 }
