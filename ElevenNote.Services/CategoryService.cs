@@ -27,7 +27,7 @@ namespace ElevenNote.Services
                 };
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Notes.Add(entity);
+                ctx.Categories.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }

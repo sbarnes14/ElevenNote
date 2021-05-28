@@ -16,7 +16,7 @@ namespace ElevenNote.WebAPI.Controllers
         public IHttpActionResult Get()
         {
             CategoryService categoryService = CreateCategoryService();
-            var categories = new CategoryService.GetCategories();
+            var categories = categoryService.GetCategories();
             return Ok(categories);
         }
         public IHttpActionResult Post(CategoryCreate category)
